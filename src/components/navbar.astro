@@ -1,12 +1,80 @@
----
+<script>
+  const openMenu = document.querySelector(".open-menu") as HTMLElement;
+  const pastYears = document.querySelector(".past-years") as HTMLElement;
+  function toggleMenu() {
+    if (openMenu.innerText === "close") {
+      openMenu.innerText = "menu";
+      pastYears.style.display = "none";
+    } else {
+      openMenu.innerText = "close";
+      pastYears.style.display = "flex";
+    }
+  }
+  openMenu.addEventListener("click", toggleMenu);
+</script>
 
----
-
-<nav class="m-6">
-    <ul class="flex gap-5">
-        <li><a href="{{ site.baseurl }}/index.html">ITAD</a></li>
-        <li class="flex-grow"></li>
-        <li><a href="{{ site.baseurl }}/about.html">About</a></li>
-        <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
+<nav class="navbar">
+  <div class="nav-left">
+    <span>ITAD</span>
+    <span>EKA.NET</span>
+  </div>
+  <div>
+    <div class="menu">
+      <span class="previous-year-title">Poprzednie lata</span>
+      <span class="material-symbols-outlined open-menu"> menu</span>
+    </div>
+    <ul class="past-years">
+      <li>2022</li>
+      <li>2021</li>
+      <li>2020</li>
+      <li>2019</li>
     </ul>
+  </div>
 </nav>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .nav-left {
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .previous-year-title {
+    font-size: 0.8em;
+  }
+
+  .open-menu {
+    cursor: pointer;
+  }
+
+  .past-years {
+    display: none;
+    position: absolute;
+    background-color: darkslateblue;
+    text-align: center;
+    list-style: none;
+    width: 180px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    transition: all 1s;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>

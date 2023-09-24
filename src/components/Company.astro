@@ -1,0 +1,39 @@
+---
+import Card from "./Card.astro";
+import Header from "./Header.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description }: Props = Astro.props;
+---
+
+<div class="company-container">
+  <div class="header-container">
+    <Header title={title} description={description} />
+  </div>
+  
+  <div class="card-container">
+    <Card/>
+  </div>
+</div>
+
+<style>
+  .company-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+  }
+
+  .header-container {
+    text-align: center;
+    color: white;
+  }
+
+  .card-container {
+    width: 500px;
+  }
+</style>
