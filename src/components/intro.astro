@@ -1,19 +1,44 @@
 ---
+import CodeWriter from "./CodeWriter.astro";
 
 ---
 
-<div class="intro">
+<div class="header-container">
   <h1 class="intro-header">IT Academic Day 2023</h1>
+  <CodeWriter />
 </div>
 
+<div class="intro-description card">
+  Wydarzenie corocznie organizowane przez koło naukowe EKA.NET na Politechnice Wrocławskiej.
+  Jeśli jesteś zainteresowany tematyką IT, chcesz poszerzyć swoją wiedzę i poznać nowych ludzi, to jest to wydarzenie dla Ciebie! <br>
+  W ramach wydarzenia odbędą się prelekcje, warsztaty oraz konkursy z nagrodami. Jest to też okazja do rozmów z przedstawicielami firm IT,
+  którzy z chęcią opowiedzą o działalności swoich firm oraz zaproponują oferty pracy i staży.
+</div>
+
+<h3 class="meet-companies center">Poznaj naszych prelegentów!</h3>
+
 <style>
-  .intro {
-    color: #fff;
+  .header-container {
+    margin-bottom: 40vh;
+    margin-left: 5%;
   }
 
   .intro-header {
     font-size: 6em;
+    margin-bottom: 0.2em;
     font-family: monospace;
+  }
+
+  .intro-description {
     margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    font-size: 1.4em;
+    width: 30%;
+  }
+
+  .meet-companies {
+    font-size: 4em;
+    letter-spacing: 1px;
   }
 </style>
