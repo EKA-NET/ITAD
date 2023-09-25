@@ -20,14 +20,14 @@
   </div>
   <div class="nav-right">
     <div class="menu">
-      <span class="previous-year-title">Poprzednie lata</span>
-      <span class="material-symbols-outlined open-menu"> menu</span>
+      <span>Poprzednie lata</span>
+      <span class="material-symbols-outlined open-menu">menu</span>
     </div>
     <ul class="past-years">
       <li>2022</li>
-      <li>2021</li>
-      <li>2020</li>
       <li>2019</li>
+      <li>2018</li>
+      <li>2017</li>
     </ul>
   </div>
 </nav>
@@ -57,38 +57,36 @@
     gap: 0.5rem;
   }
 
-  .previous-year-title {
-    font-size: 0.8em;
-  }
-
   .open-menu {
     cursor: pointer;
+    font-size: 1.4em;
   }
 
   .past-years {
     opacity: 0;
     position: absolute;
-    background-color: rgb(83, 0, 83);
     text-align: center;
     list-style: none;
     top: 100%;
     width: 100%;
-    left: 0px;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
+    left: 0;
+    padding: 0;
     transition: all 0.3s ease-in-out;
     margin: 0;
-    border-radius: 0.75rem;
+    margin-top: 5px;
     overflow: hidden;
   }
-
+  
   .past-years > li {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    margin-bottom: 5px;
     padding: 0.5rem;
   }
 
   .past-years > li:hover {
-    background-color: rgb(70, 0, 70);
+    transition: all 0.1s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
 
