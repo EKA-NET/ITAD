@@ -1,0 +1,84 @@
+---
+import Card from "./Card.astro";
+import {Image} from "astro:assets";
+import {CompanyInfo} from "../content-types";
+
+const companies: Array<CompanyInfo> = [
+  {
+    name: "Xebia",
+    description: "Firma Xebia to międzynarodowa firma specjalizująca się w obszarze nowych technologii, rozwoju oprogramowania, transformacji cyfrowej i innowacji. Zajmuje się ona szeregiem usług i działań, które pomagają firmom z różnych branż dostosować się do szybko zmieniającego się otoczenia biznesowego i wykorzystać potencjał nowoczesnych technologii.",
+    descHeader: "O nas",
+    logo: "/src/images/xebia.png",
+    short: "Software house"
+  },
+  {
+    name: "Hued.Me",
+    description: "Hued.me to międzynarodowa firma technologiczna specjalizująca się w programowaniu, transformacji cyfrowej i innowacjach. Świadczymy szeroki zakres usług, pomagając firmom z różnych branż dostosować się do dynamicznie zmieniającego się otoczenia biznesowego i wykorzystać potencjał nowoczesnych technologii.",
+    descHeader: "O Nas",
+    logo: "/src/images/innowacyjnatech.png",
+    short: "Dostawca Rozwiązań Technologicznych"
+  },
+  {
+    name: "NexaSoft",
+    description: "NexaSoft to międzynarodowa firma skupiona na najnowszych technologiach, rozwoju oprogramowania, transformacji cyfrowej i innowacjach. Nasza misja polega na pomaganiu firmom z różnych sektorów w dostosowywaniu się do ciągle ewoluującego otoczenia biznesowego i wykorzystywaniu potencjału zaawansowanych technologii.",
+    descHeader: "O Nas",
+    logo: "/src/images/nexasoft.png",
+    short: "Dostawca Rozwiązań Technologicznych"
+  },
+  {
+    name: "FutureSoft",
+    description: "FutureSoft to firma o globalnym zasięgu, specjalizująca się w rozwoju oprogramowania, transformacji cyfrowej i innowacjach. Naszym celem jest wspieranie firm z różnych branż w dostosowywaniu się do dynamicznie zmieniającego się środowiska biznesowego i wykorzystywaniu potencjału nowoczesnych technologii.",
+    descHeader: "O Nas",
+    logo: "/src/images/futuresoft.png",
+    short: "Dostawca Rozwiązań Technologicznych"
+  }
+]
+
+---
+
+{
+  companies.map(company => (
+          <div class="company-container">
+              <div class="header-container">
+                  <div class="header-container">
+                      <Image src="/src/images/pepsi.png" alt="pepsi" width="125" height="100"/>
+                      <h1 class="title">{company.name}</h1>
+                      <div class="header-description">{company.short}</div>
+                  </div>
+              </div>
+              <div class="card-container">
+                  <Card header={company.descHeader} body={company.description}/>
+              </div>
+          </div>
+    ))
+  }
+
+
+<style>
+  .company-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    color: #222222;
+  }
+
+  .header-description {
+      font-size: 1.2em;
+  }
+
+  .title {
+      font-size: 8em;
+      margin: 0;
+      color: white;
+  }
+
+  .header-container {
+    text-align: center;
+    color: white;
+  }
+
+  .card-container {
+    width: 500px;
+  }
+</style>

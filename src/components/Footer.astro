@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon';
+---
+
+<footer class="center">
+  <div>
+    <a href="">
+      <Icon name="facebook"/>
+    </a>
+    <a href="https://www.facebook.com/ekadotnet/">
+      <Icon name="website"/>
+    </a>
+  </div>
+  <h3>EKA.NET 2023</h3>
+</footer>
+
+<style>
+  footer {
+    background-image: linear-gradient(180deg, var(--bg-color) 0%, #140014 100%);
+    padding-bottom: 40vh;
+  }
+  
+  [astro-icon] {
+      color: white;
+  }
+</style>
