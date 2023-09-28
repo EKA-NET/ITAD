@@ -27,6 +27,9 @@ const { title } = Astro.props;
 <style is:global>
   :root {
     --bg-color: #301e2b;
+    --text-white: #eeeeee;
+    font-size: 16px;
+    color: var(--text-white);
   }
 
   body::-webkit-scrollbar {
@@ -63,6 +66,11 @@ const { title } = Astro.props;
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-white)
   }
 
   .card {

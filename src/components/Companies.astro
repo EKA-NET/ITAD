@@ -1,7 +1,7 @@
 ---
 import Card from "./Card.astro";
-import {Image} from "astro:assets";
-import {CompanyInfo} from "../content-types";
+import { Image } from "astro:assets";
+import type { CompanyInfo } from "../content-types";
 
 const companies: Array<CompanyInfo> = [
   {
@@ -57,6 +57,7 @@ const companies: Array<CompanyInfo> = [
 <style>
   .company-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 100vh;
@@ -64,21 +65,21 @@ const companies: Array<CompanyInfo> = [
   }
 
   .header-description {
-      font-size: 1.2em;
+    font-size: 1.2rem;
+    color: var(--text-white);
   }
 
   .title {
-      font-size: 8em;
-      margin: 0;
-      color: white;
+    font-size: 8rem;
+    margin: 0;
+    color: var(--text-white);
   }
 
   .header-container {
     text-align: center;
-    color: white;
   }
 
   .card-container {
-    width: 500px;
+    width: 60%;
   }
 </style>

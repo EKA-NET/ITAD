@@ -1,16 +1,20 @@
 <script>
   const openMenu = document.querySelector(".open-menu") as HTMLElement;
   const pastYears = document.querySelector(".past-years") as HTMLElement;
+  
+  openMenu.addEventListener("click", toggleMenu);
+  
   function toggleMenu() {
     if (openMenu.innerText === "close") {
       openMenu.innerText = "menu";
       pastYears.style.opacity = "0";
-    } else {
+    } 
+    else {
       openMenu.innerText = "close";
       pastYears.style.opacity = "1";
     }
   }
-  openMenu.addEventListener("click", toggleMenu);
+  
 </script>
 
 <nav class="navbar">
@@ -19,16 +23,19 @@
     <span>EKA.NET</span>
   </div>
   <div class="nav-right">
-    <div class="menu">
-      <span>Poprzednie lata</span>
-      <span class="material-symbols-outlined open-menu">menu</span>
+    <a href="sponsors" class="nav-link">Sponsorzy</a>
+    <div class="menu-container">
+      <div class="menu">
+        <span>Poprzednie lata</span>
+        <span class="material-symbols-outlined open-menu">menu</span>
+      </div>
+      <ul class="past-years">
+        <li>2022</li>
+        <li>2019</li>
+        <li>2018</li>
+        <li>2017</li>
+      </ul>
     </div>
-    <ul class="past-years">
-      <li>2022</li>
-      <li>2019</li>
-      <li>2018</li>
-      <li>2017</li>
-    </ul>
   </div>
 </nav>
 
@@ -36,8 +43,8 @@
   .navbar {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5em;
-    color: white;
+    font-size: 1.5rem;
+    color: var(--text-white);
     margin: 20px 30px;
   }
 
@@ -48,8 +55,16 @@
   }
 
   .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+  }
+
+  .menu-container {
     position: relative;
   }
+
   .menu {
     display: flex;
     justify-content: space-between;
