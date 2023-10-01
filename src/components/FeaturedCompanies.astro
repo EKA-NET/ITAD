@@ -13,7 +13,7 @@ const companies: Array<CompanyInfo> = [
     short: "Software house"
   },
   {
-    name: "Hued.Me",
+    name: "Hued.me",
     description:
       "Hued.me to międzynarodowa firma technologiczna specjalizująca się w programowaniu, transformacji cyfrowej i innowacjach. Świadczymy szeroki zakres usług, pomagając firmom z różnych branż dostosować się do dynamicznie zmieniającego się otoczenia biznesowego i wykorzystać potencjał nowoczesnych technologii.",
     descHeader: "O Nas",
@@ -28,17 +28,10 @@ const companies: Array<CompanyInfo> = [
     logo: "/src/images/nexasoft.png",
     short: "Dostawca Rozwiązań Technologicznych"
   },
-  {
-    name: "FutureSoft",
-    description:
-      "FutureSoft to firma o globalnym zasięgu, specjalizująca się w rozwoju oprogramowania, transformacji cyfrowej i innowacjach. Naszym celem jest wspieranie firm z różnych branż w dostosowywaniu się do dynamicznie zmieniającego się środowiska biznesowego i wykorzystywaniu potencjału nowoczesnych technologii.",
-    descHeader: "O Nas",
-    logo: "/src/images/futuresoft.png",
-    short: "Dostawca Rozwiązań Technologicznych"
-  },
 ];
 ---
 
+<div class="container">
 {
   companies.map((company) => (
     <div class="company-container">
@@ -60,8 +53,14 @@ const companies: Array<CompanyInfo> = [
     </div>
   ))
 }
+</div>
 
 <style>
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
   .company-container {
     display: flex;
     flex-direction: column;
@@ -72,12 +71,12 @@ const companies: Array<CompanyInfo> = [
   }
 
   .header-description {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-white);
   }
 
   .title {
-    font-size: 8rem;
+    font-size: 4rem;
     margin: 0;
     color: var(--text-white);
   }

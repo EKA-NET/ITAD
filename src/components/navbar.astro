@@ -19,8 +19,8 @@
 
 <nav class="navbar">
   <div class="nav-left">
-    <span>ITAD</span>
-    <span>EKA.NET</span>
+    <a href="/" class="nav-link">ITAD</a>
+    <a href="http://www.ekadotnet.pwr.edu.pl" class="nav-link">EKA.NET</a>
   </div>
   <div class="nav-right">
     <a href="sponsors" class="nav-link">Sponsorzy</a>
@@ -48,6 +48,10 @@
     margin: 20px 30px;
   }
 
+  .navbar > * {
+    align-items: center;
+  }
+
   .nav-left {
     display: flex;
     gap: 1rem;
@@ -56,7 +60,6 @@
 
   .nav-right {
     display: flex;
-    align-items: center;
     gap: 1em;
     justify-content: space-between;
   }
