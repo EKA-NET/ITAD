@@ -6,8 +6,10 @@ import CodeWriter from "./CodeWriter.astro";
 <section class="intro">
   <div class="header-container">
     <h1 class="intro-header">IT Academic Day 2023</h1>
+    <div class="date">2 grudnia 2023r. 8:00 budynek C-13 Politechnika Wrocławska</div>
     <CodeWriter />
   </div>
+
 
   <div class="description-container">
     <p class="desc-title">Czym jest IT Academic Day?</p>
@@ -37,6 +39,12 @@ import CodeWriter from "./CodeWriter.astro";
     margin-bottom: 20vh;
   }
 
+  .date {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    font-family: monospace;
+  }
+
   .header-container {
     margin-bottom: 25vh;
     margin-left: 5%;
@@ -45,7 +53,7 @@ import CodeWriter from "./CodeWriter.astro";
   .intro-header {
     font-size: 6em;
     margin-top: 0.6em;
-    margin-bottom: 0.2em;
+    margin-bottom: 0;
     font-family: monospace;
   }
 
