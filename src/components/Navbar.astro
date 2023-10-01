@@ -1,26 +1,44 @@
 <script>
   const openMenu = document.querySelector(".open-menu") as HTMLElement;
   const pastYears = document.querySelector(".past-years") as HTMLElement;
-  
+
   openMenu.addEventListener("click", toggleMenu);
-  
+
   function toggleMenu() {
     if (openMenu.innerText === "close") {
       openMenu.innerText = "menu";
       pastYears.style.opacity = "0";
-    } 
-    else {
+    } else {
       openMenu.innerText = "close";
       pastYears.style.opacity = "1";
     }
   }
-  
 </script>
 
 <nav class="navbar">
   <div class="nav-left">
+    <div class="mobile-menu">
+      <span class="material-symbols-outlined open-menu">menu</span>
+      <div class="mobile-drawer">
+        <div class="bold-big mobile-menu-header">
+          <span class="material-symbols-outlined open-menu">menu</span><span>ITAD</span>
+        </div>
+        <div>EKA.NET</div>
+        <div>Sponsorzy</div>
+        <div>Rejestracja</div>
+        <div class="mobile-prev-years">
+          <span class="bold-big">Poprzednie lata</span>
+          <ul>
+            <li>2022</li>
+            <li>2019</li>
+            <li>2018</li>
+            <li>2017</li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <a href="/" class="nav-link">ITAD</a>
-    <a href="http://www.ekadotnet.pwr.edu.pl" class="nav-link">EKA.NET</a>
+    <a href="http://www.ekadotnet.pwr.edu.pl" class="nav-link eka">EKA.NET</a>
   </div>
   <div class="nav-right">
     <a href="#" class="nav-link">Rejestracja</a>
@@ -41,6 +59,11 @@
 </nav>
 
 <style>
+  .bold-big {
+    font-weight: 800;
+    font-size: 1.85rem;
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -57,6 +80,47 @@
     display: flex;
     gap: 1rem;
     font-weight: bold;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mobile-drawer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: #200d1a;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 0px rgba(34, 9, 9, 0.836);
+    /* display: none; */
+  }
+
+  .mobile-drawer > div {
+    padding: 1rem 2rem;
+  }
+
+  .mobile-prev-years {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .mobile-prev-years > ul {
+    list-style: none;
+    padding: 0px;
+    margin-block: 0.75rem 0rem;
+  }
+
+  .mobile-prev-years > ul > li {
+    padding-block: 0.25rem;
   }
 
   .nav-right {
@@ -95,7 +159,7 @@
     margin-top: 5px;
     overflow: hidden;
   }
-  
+
   .past-years > li {
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
@@ -111,5 +175,15 @@
 
   .hidden {
     display: none;
+  }
+
+  @media screen and (max-width: 900px) {
+    .nav-right,
+    .eka {
+      display: none;
+    }
+    .mobile-menu {
+      display: flex;
+    }
   }
 </style>
