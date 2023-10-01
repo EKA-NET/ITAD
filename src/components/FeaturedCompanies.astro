@@ -31,7 +31,9 @@ const companies: Array<CompanyInfo> = [
 ];
 ---
 
-<div class="container">
+<h3 class="meet-companies center">Wyróżnieni prelegenci!</h3>
+
+<section class="container">
 {
   companies.map((company) => (
     <div class="company-container">
@@ -56,9 +58,19 @@ const companies: Array<CompanyInfo> = [
 </div>
 
 <style>
+  .meet-companies {
+    font-size: 4rem;
+    letter-spacing: 1px;
+    background-color: #250016;
+    padding: 5vh;
+    margin: 0;
+  }
+
   .container {
     display: flex;
+    padding-bottom: 30vh;
     flex-direction: row;
+    color: var(--text-color);
   }
 
   .company-container {
@@ -67,18 +79,15 @@ const companies: Array<CompanyInfo> = [
     align-items: center;
     justify-content: space-around;
     height: 100vh;
-    color: #222222;
   }
 
   .header-description {
     font-size: 1rem;
-    color: var(--text-white);
   }
 
   .title {
     font-size: 4rem;
     margin: 0;
-    color: var(--text-white);
   }
 
   .header-container {

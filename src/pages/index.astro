@@ -2,21 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Intro from "../components/Intro.astro";
 import FeaturedCompanies from "../components/FeaturedCompanies.astro";
+import Register from "../components/Register.astro";
 ---
 
 <Layout title="IT Academic Day 2023">
   <main>
     <Intro />
-    <h3 class="meet-companies center">Wyróżnieni prelegenci!</h3>
     <FeaturedCompanies />
+    <Register />
   </main>
 </Layout>
-
-<style>
-  .meet-companies {
-    font-size: 4rem;
-    letter-spacing: 1px;
-    background-color: #250016;
-    padding: 5vh;
-  }
-</style>
