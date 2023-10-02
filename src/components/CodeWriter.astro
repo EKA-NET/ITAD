@@ -86,11 +86,21 @@
   #typewriter {
     font-size: 2em;
     margin: 0;
-    font-family: "Courier New";
+    font-family: monospace;
+    max-width: 100%;
+    word-wrap: anywhere;
+    white-space: pre-wrap;
+    overflow-x: auto;
 
     &:after {
       content: "|";
       animation: blink 500ms linear infinite alternate;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    #typewriter {
+      font-size: 1em;
     }
   }
 

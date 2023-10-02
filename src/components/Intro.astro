@@ -31,7 +31,7 @@ import CodeWriter from "./CodeWriter.astro";
       Koło jest również odpowiedzialne za coroczną organizację IT Academic Day - największego wydarzenia o tematyce IT na Politechnice Wrocławskiej.
     </div> 
   </div>
-</div>
+</section>
 
 
 <style>
@@ -59,6 +59,7 @@ import CodeWriter from "./CodeWriter.astro";
 
   .description-container {
     display: flex;
+    text-align: center;
     flex-direction: column;
     margin-left: 5%;
     margin-right: 5%;
@@ -76,5 +77,28 @@ import CodeWriter from "./CodeWriter.astro";
   .description {
     display: flex;
     flex-direction: row;
+  }
+
+  @media screen and (max-width: 900px) {
+    .intro {
+      margin-bottom: 5vh;
+    }
+
+    .intro-header {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .date {
+      font-size: 1em;;
+    }
+
+    .header-container {
+      margin-bottom: 5vh;
+    }
+
+    .description-container {
+      font-size: 1rem;
+    }
   }
 </style>
