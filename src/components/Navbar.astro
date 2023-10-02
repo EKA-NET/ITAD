@@ -4,7 +4,7 @@
   const pastYears = document.querySelector(".past-years") as HTMLElement;
 
   openMenu.addEventListener("click", toggleMenu);
-  openMenuMobile.forEach(menu => menu.addEventListener("click", toggleMobileMenu));
+  //openMenuMobile.forEach(menu => menu.addEventListener("click", toggleMobileMenu));
 
   function toggleMenu() {
     if (openMenu.innerText === "close") {
@@ -16,10 +16,10 @@
     }
   }
 
-  function toggleMobileMenu() {
+/*  function toggleMobileMenu() {
     const mobileDrawer = document.querySelector(".mobile-drawer") as HTMLElement;
-    mobileDrawer.classList.toggle("hidden");
-  }
+    mobileDrawer.style.transform = mobileDrawer.style.transform === "translateX(-100%)" ? "translateX(0%)" : "translateX(-100%)";
+  }*/
 </script>
 
 <nav class="navbar">
@@ -27,7 +27,7 @@
     <div class="mobile-menu">
       <span class="material-symbols-outlined mobile-open-menu">menu</span>
 
-      <div class="mobile-drawer hidden">
+      <div class="mobile-drawer">
         <div class="bold-big mobile-menu-header">
           <span class="material-symbols-outlined mobile-open-menu">menu</span>
           <span>ITAD</span>
@@ -103,15 +103,20 @@
   }
 
   .mobile-drawer {
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     height: 100%;
     background-color: #200d1a;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 10px 0px rgba(34, 9, 9, 0.836);
-    display: none;
+    box-shadow: 0 0 10px 0 rgba(34, 9, 9, 0.85);
+    transform: translateX(-100%);
+    transition: transform .5s ease-in-out;
+  }
+
+  .mobile-open-menu:hover + .mobile-drawer {
+    transform: translateX(0);
   }
 
   .mobile-drawer > div {
@@ -187,10 +192,6 @@
     .nav-right,
     .eka {
       display: none;
-    }
-    
-    .mobile-drawer {
-      display: block;
     }
 
     .mobile-menu {
