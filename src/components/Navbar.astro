@@ -1,10 +1,8 @@
 <script>
   const openMenu = document.querySelector(".open-menu") as HTMLElement;
-  const openMenuMobile = document.querySelectorAll(".mobile-open-menu") as NodeListOf<HTMLElement>;
   const pastYears = document.querySelector(".past-years") as HTMLElement;
 
   openMenu.addEventListener("click", toggleMenu);
-  //openMenuMobile.forEach(menu => menu.addEventListener("click", toggleMobileMenu));
 
   function toggleMenu() {
     if (openMenu.innerText === "close") {
@@ -16,10 +14,6 @@
     }
   }
 
-/*  function toggleMobileMenu() {
-    const mobileDrawer = document.querySelector(".mobile-drawer") as HTMLElement;
-    mobileDrawer.style.transform = mobileDrawer.style.transform === "translateX(-100%)" ? "translateX(0%)" : "translateX(-100%)";
-  }*/
 </script>
 
 <nav class="navbar">
@@ -32,9 +26,10 @@
           <span class="material-symbols-outlined mobile-open-menu">menu</span>
           <span>ITAD</span>
         </div>
-        <div>EKA.NET</div>
-        <div>Sponsorzy</div>
-        <div>Rejestracja</div>
+        <a href="http://www.ekadotnet.pwr.edu.pl" class="nav-link">EKA.NET</a>
+        <a href="sponsors" class="nav-link">Sponsorzy</a>
+        <a href="#" class="nav-link">Rejestracja</a>
+
         <div class="mobile-prev-years">
           <span class="bold-big">Poprzednie lata</span>
           <ul>
@@ -117,6 +112,10 @@
 
   .mobile-open-menu:hover + .mobile-drawer {
     transform: translateX(0);
+  }
+
+  .mobile-drawer .nav-link {
+    padding-inline: 2rem;
   }
 
   .mobile-drawer > div {
