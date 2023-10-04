@@ -1,7 +1,8 @@
 ---
 import Card from "./Card.astro";
-import { Image } from "astro:assets";
-import type { CompanyInfo } from "../content-types";
+import {Image} from "astro:assets";
+import type {CompanyInfo} from "../content-types";
+import {Icon} from "astro-icon";
 
 const companies: Array<CompanyInfo> = [
   {
@@ -10,84 +11,124 @@ const companies: Array<CompanyInfo> = [
       "Firma Xebia to międzynarodowa firma specjalizująca się w obszarze nowych technologii, rozwoju oprogramowania, transformacji cyfrowej i innowacji. Zajmuje się ona szeregiem usług i działań, które pomagają firmom z różnych branż dostosować się do szybko zmieniającego się otoczenia biznesowego i wykorzystać potencjał nowoczesnych technologii.",
     descHeader: "O nas",
     logo: "/src/images/xebia.png",
-    short: "Software house"
+    short: "Software house",
+    socials: [
+      {
+        link: "https://www.facebook.com/XebiaPoland",
+        icon: "uiw:facebook"
+      },
+      {
+        link: "https://www.linkedin.com/company/xebia",
+        icon: "akar-icons:linkedin-fill"
+      },
+      {
+        link: "https://twitter.com/XebiaPoland",
+        icon: "akar-icons:twitter-fill"
+      },
+      {
+        link: "https://www.instagram.com/xebia_poland/",
+        icon: "akar-icons:instagram-fill"
+      },
+      {
+        link: "https://www.youtube.com/channel/UCQX5YJHjXxgYQ0QX6YQ3Z0Q",
+        icon: "akar-icons:youtube-fill"
+      }
+    ]
   },
   {
-    name: "Hued.Me",
+    name: "Hued.me",
     description:
       "Hued.me to międzynarodowa firma technologiczna specjalizująca się w programowaniu, transformacji cyfrowej i innowacjach. Świadczymy szeroki zakres usług, pomagając firmom z różnych branż dostosować się do dynamicznie zmieniającego się otoczenia biznesowego i wykorzystać potencjał nowoczesnych technologii.",
     descHeader: "O Nas",
     logo: "/src/images/innowacyjnatech.png",
-    short: "Dostawca Rozwiązań Technologicznych"
-  },
-  {
-    name: "NexaSoft",
-    description:
-      "NexaSoft to międzynarodowa firma skupiona na najnowszych technologiach, rozwoju oprogramowania, transformacji cyfrowej i innowacjach. Nasza misja polega na pomaganiu firmom z różnych sektorów w dostosowywaniu się do ciągle ewoluującego otoczenia biznesowego i wykorzystywaniu potencjału zaawansowanych technologii.",
-    descHeader: "O Nas",
-    logo: "/src/images/nexasoft.png",
-    short: "Dostawca Rozwiązań Technologicznych"
-  },
-  {
-    name: "FutureSoft",
-    description:
-      "FutureSoft to firma o globalnym zasięgu, specjalizująca się w rozwoju oprogramowania, transformacji cyfrowej i innowacjach. Naszym celem jest wspieranie firm z różnych branż w dostosowywaniu się do dynamicznie zmieniającego się środowiska biznesowego i wykorzystywaniu potencjału nowoczesnych technologii.",
-    descHeader: "O Nas",
-    logo: "/src/images/futuresoft.png",
-    short: "Dostawca Rozwiązań Technologicznych"
+    short: "Dostawca Rozwiązań Technologicznych",
+    socials: [
+      {
+        link: "https://www.facebook.com/hued.me",
+        icon: "uiw:facebook"
+      },
+      {
+        link: "https://www.linkedin.com/company/hued-me",
+        icon: "akar-icons:linkedin-fill"
+      },
+      {
+        link: "https://twitter.com/hued_me",
+        icon: "akar-icons:twitter-fill"
+      },
+      {
+        link: "https://www.instagram.com/hued.me/",
+        icon: "akar-icons:instagram-fill"
+      },
+      {
+        link: "https://www.youtube.com/channel/UCQX5YJHjXxgYQ0QX6YQ3Z0Q",
+        icon: "akar-icons:youtube-fill"
+      }
+    ]
   },
 ];
 ---
 
 {
   companies.map((company) => (
-    <div class="company-container">
+  <div class="company-container">
+    <div class="header-container">
       <div class="header-container">
-        <div class="header-container">
-          <Image
+        <Image
             src="/src/images/pepsi.png"
             alt="pepsi"
             width="125"
             height="100"
-          />
-          <h1 class="title">{company.name}</h1>
-          <div class="header-description">{company.short}</div>
-        </div>
-      </div>
-      <div class="card-container">
-        <Card header={company.descHeader} body={company.description} />
+        />
+        <h1 class="title">{company.name}</h1>
+        <span class="header-description">{company.short}</span>
       </div>
     </div>
-  ))
-}
+    <div class="icon-container">
+      {
+        company.socials.map((social) => (
+            <a href={social.link} class="icon-link">
+              <Icon name={social.icon} class="icon"/>
+            </a>
+        ))
+      }
+    </div>
+  </div>
+    ))
+  }
 
 <style>
-    .company-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      gap: 3rem;
-      color: #222222;
-      margin-bottom: 6rem;
-    }
-  
-    .header-description {
-      font-size: 1.2rem;
-      color: var(--text-white);
-    }
-  
-    .title {
-      font-size: 8rem;
-      margin: 0;
-      color: var(--text-white);
-    }
-  
-    .header-container {
-      text-align: center;
-    }
-  
-    .card-container {
-      width: 60%;
-    }
-  </style>
+  .company-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    color: #222222;
+    margin-bottom: 6rem;
+  }
+
+  .header-description {
+    font-size: 1.2rem;
+    color: var(--text-white);
+  }
+
+  .title {
+    font-size: 8rem;
+    margin: 0;
+    color: var(--text-white);
+  }
+
+  .header-container {
+    text-align: center;
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .icon-container > a {
+    padding: 1em;
+  }
+</style>

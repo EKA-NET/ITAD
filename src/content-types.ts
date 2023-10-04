@@ -4,4 +4,10 @@ export interface CompanyInfo {
   descHeader: string
   description: string
   logo: string
+  socials: CompanySocial[]
+}
+
+export interface CompanySocial {
+  icon: string
+  link: string
 }

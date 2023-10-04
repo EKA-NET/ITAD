@@ -8,7 +8,6 @@ import { Icon } from 'astro-icon';
     <Icon name="facebook"/>
     <Icon name="website"/>
     <a href="https://www.facebook.com/ekadotnet/">
-      
     </a>
   </div>
   <h3>EKA.NET 2023</h3>
@@ -17,11 +16,10 @@ import { Icon } from 'astro-icon';
 <style>
   footer {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgb(0, 0, 0));
-    padding-bottom: 15vh;
-    padding-top: 25vh;
+    padding-block: 25vh 15vh;
   }
-  
-  [astro-icon] {
-      color: white;
+
+  @media screen and (max-width: 900px) {
+    padding-block: 25vh 5vh;
   }
 </style>

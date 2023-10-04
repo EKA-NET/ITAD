@@ -37,7 +37,7 @@ const { title } = Astro.props;
 </html>
 <style is:global>
   :root {
-    --bg-color: #301e2b;
+    --bg-color: #101923;
     --text-white: #eeeeee;
     font-size: 16px;
     color: var(--text-white);
@@ -103,6 +103,15 @@ const { title } = Astro.props;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .icon {
+    width: 100%;
+  }
+
+  .icon-link {
+    color: var(--text-white);
+    text-decoration: none;
   }
 
   @media screen and (max-width: 900px) {
