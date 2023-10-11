@@ -16,6 +16,12 @@ import Layout from "../layouts/Layout.astro";
   .start-header {
     margin-block: 1em 2em;
     text-align: center;
-    font-size: 5rem;
+    font-size: 5em;
+  }
+
+  @media screen and (max-width: 900px) {
+    .start-header {
+      font-size: 3em;
+    }
   }
 </style>
