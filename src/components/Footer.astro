@@ -4,10 +4,12 @@ import { Icon } from 'astro-icon';
 ---
 
 <footer class="center">
-  <div>
-    <Icon name="facebook"/>
-    <Icon name="website"/>
-    <a href="https://www.facebook.com/ekadotnet/">
+  <div class="footer-icon-container">
+    <a href="https://www.facebook.com/ekadotnet" class="icon-link">
+      <Icon name="uiw:facebook" class="icon"/>
+    </a>
+    <a href="https://ekadotnet.pwr.edu.pl" class="icon-link">
+      <Icon name="mdi:web" class="icon"/>
     </a>
   </div>
   <h3>EKA.NET 2023</h3>
@@ -17,6 +19,18 @@ import { Icon } from 'astro-icon';
   footer {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgb(0, 0, 0));
     padding-block: 25vh 15vh;
+    flex-direction: column;
+  }
+
+  .footer-icon-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+  }
+
+  .footer-icon-container .icon {
+    width: 4em;
+    height: 4em;
   }
 
   @media screen and (max-width: 900px) {
