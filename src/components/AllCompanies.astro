@@ -16,17 +16,15 @@ const {companies} = Astro.props;
   companies.map((company) => (
   <div class="company-container">
     <div class="header-container">
-      <div class="header-container">
-        <Image
-            src="/src/images/pepsi.png"
-            alt="pepsi"
-            width="125"
-            height="100"
-        />
-        <h1 class="title">{company.name}</h1>
-        <span class="header-description">{company.short}</span>
-      </div>
+      <Image
+          src={company.logo}
+          alt=`${company.name} logo`
+          width="250"
+          height="200"
+          class="logo"
+      />
     </div>
+    <span class="header-description">{company.short}</span>
     <div class="icon-container">
       {
         company.socials.map((social) => (
@@ -74,6 +72,11 @@ const {companies} = Astro.props;
 
   .icon-container > a {
     padding: 2em;
+  }
+
+  .logo {
+    width: 50%;
+    height: auto;
   }
 
   @media screen and (max-width: 1400px) {

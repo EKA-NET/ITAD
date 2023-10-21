@@ -6,62 +6,51 @@ import Layout from "../layouts/Layout.astro";
 const companyList: CompanyInfo[] = [
   {
     name: "Xebia",
-    descHeader: "O nas",
-    logo: "/src/images/xebia.png",
+    logo: "/src/images/Xebia_Logo.png",
     short: "Software house",
     socials: [
-    {
-      link: "https://www.facebook.com/XebiaPoland",
-      icon: "uiw:facebook"
-    },
-    {
-      link: "https://www.linkedin.com/company/xebia",
-      icon: "akar-icons:linkedin-fill"
-    },
-    {
-      link: "https://twitter.com/XebiaPoland",
-      icon: "akar-icons:twitter-fill"
-    },
-    {
-      link: "https://www.instagram.com/xebia_poland/",
-      icon: "akar-icons:instagram-fill"
-    },
-    {
-      link: "https://www.youtube.com/channel/UCQX5YJHjXxgYQ0QX6YQ3Z0Q",
-      icon: "akar-icons:youtube-fill"
-    }
-  ]
+      {
+        link: "https://www.facebook.com/XebiaPoland",
+        icon: "uiw:facebook"
+      },
+      {
+        link: "https://www.linkedin.com/company/xebia",
+        icon: "akar-icons:linkedin-fill"
+      },
+      {
+        link: "https://twitter.com/XebiaPoland",
+        icon: "akar-icons:twitter-fill"
+      },
+      {
+        link: "https://www.youtube.com/channel/UCQX5YJHjXxgYQ0QX6YQ3Z0Q",
+        icon: "akar-icons:youtube-fill"
+      }
+    ]
   },
   {
     name: "Hued.me",
-    descHeader: "O Nas",
-    logo: "/src/images/innowacyjnatech.png",
+    logo: "/src/images/HuedMe_Logo.png",
     short: "Dostawca Rozwiązań Technologicznych",
     socials: [
-    {
-      link: "https://www.facebook.com/hued.me",
-      icon: "uiw:facebook"
-    },
-    {
-      link: "https://www.linkedin.com/company/hued-me",
-      icon: "akar-icons:linkedin-fill"
-    },
-    {
-      link: "https://twitter.com/hued_me",
-      icon: "akar-icons:twitter-fill"
-    },
-    {
-      link: "https://www.instagram.com/hued.me/",
-      icon: "akar-icons:instagram-fill"
-    },
-    {
-      link: "https://www.youtube.com/channel/UCQX5YJHjXxgYQ0QX6YQ3Z0Q",
-      icon: "akar-icons:youtube-fill"
-    }
-  ]
+      {
+        link: "https://www.facebook.com/hued.me",
+        icon: "uiw:facebook"
+      },
+      {
+        link: "https://www.linkedin.com/company/hued-me",
+        icon: "akar-icons:linkedin-fill"
+      },
+      {
+        link: "https://twitter.com/hued_me",
+        icon: "akar-icons:twitter-fill"
+      },
+      {
+        link: "https://www.youtube.com/channel/UCQX5YJHjXxgYQ0QX6YQ3Z0Q",
+        icon: "akar-icons:youtube-fill"
+      }
+    ]
   },
-  ];
-
+];
 ---
 
 <Layout title="ITAD 2023 - Sponsorzy">
@@ -69,7 +58,7 @@ const companyList: CompanyInfo[] = [
     <div>
       <h1 class="start-header">Poznaj wszystkich sponsorów!</h1>
     </div>
-    <AllCompanies companies={companyList} />
+    <AllCompanies companies={companyList}/>
   </main>
 </Layout>
 
