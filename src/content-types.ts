@@ -1,3 +1,5 @@
+import type { ImageMetadata } from "astro"
+
 export interface CompanyInfo {
   name: string
   short: string
@@ -8,4 +10,10 @@ export interface CompanyInfo {
 export interface CompanySocial {
   icon: string
   link: string
+}
+
+export interface AboutInfo {
+  title: string
+  content: string
+  imageSrc: ImageMetadata
 }

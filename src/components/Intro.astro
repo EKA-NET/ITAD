@@ -1,35 +1,12 @@
 ---
 import CodeWriter from "./CodeWriter.astro";
-
 ---
 
 <section class="intro">
   <div class="header-container">
-    <h1 class="intro-header">IT Academic Day 2023</h1>
-    <div class="date">2 grudnia 2023r. 8:00 budynek C-13 Politechnika Wrocławska</div>
+    <h1 class="intro-header">IT Academic Day 2024</h1>
+    <div class="date">11 maja 2024r. 9:00 budynek C-13 Politechnika Wrocławska</div>
     <CodeWriter />
-  </div>
-
-
-  <div class="description-container">
-    <p class="desc-title">Czym jest IT Academic Day?</p>
-    <div class="description">
-      Jest to wydarzenie corocznie organizowane przez koło naukowe EKA.NET na Politechnice Wrocławskiej.
-      Jeśli jesteś zainteresowany tematyką IT, chcesz poszerzyć swoją wiedzę i poznać nowych ludzi, to jest to wydarzenie dla Ciebie!
-      W ramach wydarzenia odbędą się prelekcje, warsztaty oraz konkursy z nagrodami. Jest to też okazja do rozmów z przedstawicielami firm IT,
-      którzy z chęcią opowiedzą o działalności swoich firm oraz zaproponują oferty pracy i staży.
-    </div> 
-  </div>
-
-  <div class="description-container">
-    <p class="desc-title">O organizatorach</p>
-    <div class="description">
-      Koło naukowe EKA.NET jest organizacją studencką działającą na Politechnice Wrocławskiej od X roku.
-      Celem koła jest rozwijanie zainteresowań studentów związanych z branżą IT, głównie wokół technologii .NET i Azure 
-      a także organizacja wydarzeń z nią związanych.
-      W ramach koła organizowane są wydarzenia, hackathony oraz wspólne wyjścia na konferencje.
-      Koło jest również odpowiedzialne za coroczną organizację IT Academic Day - największego wydarzenia o tematyce IT na Politechnice Wrocławskiej.
-    </div> 
   </div>
 </section>
 
@@ -46,7 +23,7 @@ import CodeWriter from "./CodeWriter.astro";
   }
 
   .header-container {
-    margin-bottom: 80vh;
+    margin-bottom: 40vh;
     margin-left: 5%;
   }
 
@@ -55,28 +32,6 @@ import CodeWriter from "./CodeWriter.astro";
     margin-top: 0.6em;
     margin-bottom: 0;
     font-family: monospace;
-  }
-
-  .description-container {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 10%;
-    font-size: 1.4em;
-  }
-
-  .desc-title {
-    font-size: 1.4em;
-    font-weight: bold;
-    margin-bottom: 0.5em;
-    text-align: center;
-  }
-
-  .description {
-    display: flex;
-    flex-direction: row;
   }
 
   @media screen and (max-width: 900px) {
@@ -95,10 +50,6 @@ import CodeWriter from "./CodeWriter.astro";
 
     .header-container {
       margin-bottom: 10vh;
-    }
-
-    .description-container {
-      font-size: 1rem;
     }
   }
 </style>
