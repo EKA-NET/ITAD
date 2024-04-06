@@ -8,7 +8,8 @@
     if (openMenu.innerText === "close") {
       openMenu.innerText = "menu";
       pastYears.style.opacity = "0";
-    } else {
+    } 
+    else {
       openMenu.innerText = "close";
       pastYears.style.opacity = "1";
     }
@@ -29,16 +30,6 @@
         <a href="http://www.ekadotnet.pwr.edu.pl" class="nav-link">EKA.NET</a>
         <a href="sponsors" class="nav-link">Sponsorzy</a>
         <a href="#" class="nav-link">Rejestracja</a>
-
-        <div class="mobile-prev-years">
-          <span class="bold-big">Poprzednie lata</span>
-          <ul>
-            <li>2022</li>
-            <li>2019</li>
-            <li>2018</li>
-            <li>2017</li>
-          </ul>
-        </div>
       </div>
     </div>
     <a href="/" class="nav-link">ITAD</a>
@@ -47,18 +38,7 @@
   <div class="nav-right">
     <a href="#" class="nav-link">Rejestracja</a>
     <a href="sponsors" class="nav-link">Sponsorzy</a>
-    <div class="menu-container">
-      <div class="menu">
-        <span>Poprzednie lata</span>
-        <span class="material-symbols-outlined open-menu">menu</span>
-      </div>
-      <ul class="past-years">
-        <li><a href="sponsors-2022">2022</a></li>
-        <li>2019</li>
-        <li>2018</li>
-        <li>2017</li>
-      </ul>
-    </div>
+  </div>
   </div>
 </nav>
 
@@ -122,21 +102,6 @@
     padding: 1rem 2rem;
   }
 
-  .mobile-prev-years {
-    margin-top: 1rem;
-    text-align: center;
-  }
-
-  .mobile-prev-years > ul {
-    list-style: none;
-    padding: 0px;
-    margin-block: 0.75rem 0rem;
-  }
-
-  .mobile-prev-years > ul > li {
-    padding-block: 0.25rem;
-  }
-
   .nav-right {
     display: flex;
     gap: 1em;
@@ -157,34 +122,6 @@
   .open-menu, .mobile-open-menu {
     cursor: pointer;
     font-size: 1.4em;
-  }
-
-  .past-years {
-    opacity: 0;
-    position: absolute;
-    text-align: center;
-    list-style: none;
-    top: 100%;
-    width: 100%;
-    left: 0;
-    padding: 0;
-    transition: all 0.3s ease-in-out;
-    margin: 0;
-    margin-top: 5px;
-    overflow: hidden;
-  }
-
-  .past-years > li {
-    background-color: rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
-    margin-bottom: 5px;
-    padding: 0.5rem;
-  }
-
-  .past-years > li:hover {
-    transition: all 0.1s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.4);
-    cursor: pointer;
   }
 
   @media screen and (max-width: 900px) {

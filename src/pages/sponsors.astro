@@ -1,70 +1,58 @@
 ---
-import {CompanyInfo} from "../content-types";
-import AllCompanies from "../components/AllCompanies.astro";
 import Layout from "../layouts/Layout.astro";
 
-const companyList: CompanyInfo[] = [
-  {
-    name: "Xebia",
-    logo: "/src/images/Xebia_Logo.png",
-    short: "Software house",
-    socials: [
-      {
-        link: "https://www.facebook.com/XebiaPoland",
-        icon: "uiw:facebook"
-      },
-      {
-        link: "https://www.linkedin.com/company/xebia",
-        icon: "akar-icons:linkedin-fill"
-      },
-      {
-        link: "https://twitter.com/XebiaPoland",
-        icon: "akar-icons:twitter-fill"
-      },
-      {
-        link: "https://www.youtube.com/channel/UCQX5YJHjXxgYQ0QX6YQ3Z0Q",
-        icon: "akar-icons:youtube-fill"
-      }
-    ]
-  },
-  {
-    name: "Hued.me",
-    logo: "/src/images/HuedMe_Logo.png",
-    short: "Dostawca Rozwiązań Technologicznych",
-    socials: [
-      {
-        link: "https://www.facebook.com/hued.me",
-        icon: "uiw:facebook"
-      },
-      {
-        link: "https://www.linkedin.com/company/hued-me",
-        icon: "akar-icons:linkedin-fill"
-      },
-      {
-        link: "https://twitter.com/hued_me",
-        icon: "akar-icons:twitter-fill"
-      },
-      {
-        link: "https://www.youtube.com/channel/UCQX5YJHjXxgYQ0QX6YQ3Z0Q",
-        icon: "akar-icons:youtube-fill"
-      }
-    ]
-  },
+type Company = {
+  name: string;
+  logo: string;
+  website: string;
+};
+
+const itCompanies: Array<Company> = [
+  { name: "Volvo", logo: "src/images/Volvo_Logo.png", website: "https://www.example.com" },
+  { name: "Xebia", logo: "src/images/Xebia_Logo_White.png", website: "https://www.example.com" },
+  { name: "Ten Square Games", logo: "src/images/TSG_Logo.png", website: "https://www.example.com" },
+  { name: "Sente", logo: "src/images/Sente_Logo.png", website: "https://www.example.com" },
+  { name: "Hued.me", logo: "src/images/HuedMe_Logo.svg", website: "https://www.example.com" }
+];
+
+const supportCompanies: Array<Company> = [
+  { name: "NoFluffJobs", logo: "src/images/NFJ_Logo.png", website: "https://nofluffjobs.com" },
 ];
 ---
 
-<Layout title="ITAD 2023 - Sponsorzy">
+<Layout title="ITAD 2024 - Sponsorzy">
   <main>
     <div>
-      <h1 class="start-header">Poznaj wszystkich sponsorów!</h1>
+      <h1 class="start-header">Poznaj naszych sponsorów!</h1>
     </div>
-    <AllCompanies companies={companyList}/>
+
+    <h3 class="featured-header center">Prelegenci</h3>
+    <section class="companies">
+      {itCompanies.map((company) => (
+        <div class="company">
+          <a href={company.website} target="_blank" rel="noopener">
+            <img src={company.logo} class="" alt={company.name} />
+          </a>
+        </div>
+      ))}
+    </section>
+
+    <h3 class="featured-header center">Wsparcie</h3>
+    <section class="companies">
+      {supportCompanies.map((company) => (
+        <div class="company">
+          <a href={company.website} target="_blank" rel="noopener">
+            <img src={company.logo} class="" alt={company.name} />
+          </a>
+        </div>
+      ))}
+    </section>
   </main>
 </Layout>
 
 <style>
   .start-header {
-    margin-block: 1em 2em;
+    margin-block: 1em;
     text-align: center;
     font-size: 5em;
   }
@@ -72,6 +60,24 @@ const companyList: CompanyInfo[] = [
   @media screen and (max-width: 900px) {
     .start-header {
       font-size: 3em;
+    }
+  }
+
+  .companies {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+    margin-bottom: 8rem;
+  }
+  
+  .company {
+    width: 20%;
+    margin: 2rem;
+
+    * img {
+      width: 100%;
     }
   }
 </style>
