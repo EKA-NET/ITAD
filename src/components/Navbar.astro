@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import MicrosoftLogo from "../assets/Microsoft_Logo.png";
+---
+
 <script>
   const openMenu = document.querySelector(".open-menu") as HTMLElement;
   const pastYears = document.querySelector(".past-years") as HTMLElement;
@@ -33,7 +38,7 @@
       </div>
     </div>
     <a href="/" class="nav-link">ITAD</a>
-    <a href="http://www.ekadotnet.pwr.edu.pl" class="nav-link eka">EKA<img class="microsoft-logo" src="../../src/images/Microsoft_Logo.png" />NET</a>
+    <a href="http://www.ekadotnet.pwr.edu.pl" class="nav-link eka">EKA<Image class="microsoft-logo" alt="" src={MicrosoftLogo} />NET</a>
   </div>
   <div class="nav-right">
     <a href="#" class="nav-link">Rejestracja</a>
@@ -50,6 +55,7 @@
 
   .microsoft-logo {
     height: 1rem;
+    width: 1rem;
     margin-inline: 0.2rem;
   }
 

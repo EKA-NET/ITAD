@@ -1,22 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import VolvoLogo from "../assets/Volvo_Logo.png";
+import XebiaLogo from "../assets/Xebia_Logo_White.png";
+import TSGLogo from "../assets/TSG_Logo.png";
+import SenteLogo from "../assets/Sente_Logo.png";
+import HuedMeLogo from "../assets/HuedMe_Logo.svg";
+import NFJLogo from "../assets/NFJ_Logo.png";
 
 type Company = {
   name: string;
-  logo: string;
+  logo: ImageMetadata;
   website: string;
 };
 
 const itCompanies: Array<Company> = [
-  { name: "Volvo", logo: "src/images/Volvo_Logo.png", website: "https://www.example.com" },
-  { name: "Xebia", logo: "src/images/Xebia_Logo_White.png", website: "https://www.example.com" },
-  { name: "Ten Square Games", logo: "src/images/TSG_Logo.png", website: "https://www.example.com" },
-  { name: "Sente", logo: "src/images/Sente_Logo.png", website: "https://www.example.com" },
-  { name: "Hued.me", logo: "src/images/HuedMe_Logo.svg", website: "https://www.example.com" }
+  { name: "Volvo", logo: VolvoLogo, website: "https://www.example.com" },
+  { name: "Xebia", logo: XebiaLogo, website: "https://www.example.com" },
+  { name: "Ten Square Games", logo: TSGLogo, website: "https://www.example.com" },
+  { name: "Sente", logo: SenteLogo, website: "https://www.example.com" },
+  { name: "Hued.me", logo: HuedMeLogo, website: "https://www.example.com" }
 ];
 
 const supportCompanies: Array<Company> = [
-  { name: "NoFluffJobs", logo: "src/images/NFJ_Logo.png", website: "https://nofluffjobs.com" },
+  { name: "NoFluffJobs", logo: NFJLogo, website: "https://nofluffjobs.com" },
 ];
 ---
 
@@ -31,7 +39,7 @@ const supportCompanies: Array<Company> = [
       {itCompanies.map((company) => (
         <div class="company">
           <a href={company.website} target="_blank" rel="noopener">
-            <img src={company.logo} class="" alt={company.name} />
+            <Image src={company.logo} class="" alt={company.name} />
           </a>
         </div>
       ))}
@@ -42,7 +50,7 @@ const supportCompanies: Array<Company> = [
       {supportCompanies.map((company) => (
         <div class="company">
           <a href={company.website} target="_blank" rel="noopener">
-            <img src={company.logo} class="" alt={company.name} />
+            <Image src={company.logo} class="" alt={company.name} />
           </a>
         </div>
       ))}
@@ -78,6 +86,7 @@ const supportCompanies: Array<Company> = [
 
     * img {
       width: 100%;
+      height: auto;
     }
   }
 </style>
