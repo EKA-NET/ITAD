@@ -9,6 +9,9 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "astro": "^4.5.16",
     "astro-icon": "^0.8.1"
