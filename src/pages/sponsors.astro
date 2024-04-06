@@ -16,11 +16,11 @@ type Company = {
 };
 
 const itCompanies: Array<Company> = [
-  { name: "Volvo", logo: VolvoLogo, website: "https://www.example.com" },
-  { name: "Xebia", logo: XebiaLogo, website: "https://www.example.com" },
-  { name: "Ten Square Games", logo: TSGLogo, website: "https://www.example.com" },
-  { name: "Sente", logo: SenteLogo, website: "https://www.example.com" },
-  { name: "Hued.me", logo: HuedMeLogo, website: "https://www.example.com" }
+  { name: "Hued.me", logo: HuedMeLogo, website: "https://hued.me" },
+  { name: "Xebia", logo: XebiaLogo, website: "https://xebia.com" },
+  { name: "Ten Square Games", logo: TSGLogo, website: "https://tensquaregames.com/pl/" },
+  { name: "Sente", logo: SenteLogo, website: "https://sente.pl" },
+  { name: "Volvo", logo: VolvoLogo, website: "https://www.volvogroup.com/pl/" },
 ];
 
 const supportCompanies: Array<Company> = [
@@ -32,28 +32,29 @@ const supportCompanies: Array<Company> = [
   <main>
     <div>
       <h1 class="start-header">Poznaj naszych sponsorów!</h1>
+      <p class="center">(Tematy prelekcji zostaną wkrótce przekazane!)</p>
     </div>
 
     <h3 class="featured-header center">Prelegenci</h3>
     <section class="companies">
-      {itCompanies.map((company) => (
-        <div class="company">
+      {
+        itCompanies.map((company) => (
           <a href={company.website} target="_blank" rel="noopener">
             <Image src={company.logo} class="" alt={company.name} />
           </a>
-        </div>
-      ))}
+        ))
+      }
     </section>
 
     <h3 class="featured-header center">Wsparcie</h3>
-    <section class="companies">
-      {supportCompanies.map((company) => (
-        <div class="company">
+    <section class="companies support-companies">
+      {
+        supportCompanies.map((company) => (
           <a href={company.website} target="_blank" rel="noopener">
-            <Image src={company.logo} class="" alt={company.name} />
+            <Image src={company.logo} alt={company.name} />
           </a>
-        </div>
-      ))}
+        ))
+      }
     </section>
   </main>
 </Layout>
@@ -65,12 +66,6 @@ const supportCompanies: Array<Company> = [
     font-size: 5em;
   }
 
-  @media screen and (max-width: 900px) {
-    .start-header {
-      font-size: 3em;
-    }
-  }
-
   .companies {
     display: flex;
     justify-content: space-evenly;
@@ -78,15 +73,56 @@ const supportCompanies: Array<Company> = [
     flex-wrap: wrap;
     padding: 5rem;
     margin-bottom: 8rem;
-  }
-  
-  .company {
-    width: 20%;
-    margin: 2rem;
+    gap: 2rem;
+    
+    & > * {
+      width: 25%;
 
-    * img {
-      width: 100%;
-      height: auto;
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .support-companies {
+    & > * {
+      width: 15%;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .start-header {
+      font-size: 3em;
+    }
+
+    .companies {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-block: 3rem;
+      min-height: 50vh;
+      padding: 0.5rem;
+      gap: 3rem;
+
+      & > * {
+        width: 60%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .support-companies {
+      & > * {
+        width: 30%;
+      }
     }
   }
 </style>
