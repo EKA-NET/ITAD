@@ -44,6 +44,10 @@ const { title } = Astro.props;
     color: var(--text-white);
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   body::-webkit-scrollbar {
     width: 1em;
   }
@@ -126,6 +130,12 @@ const { title } = Astro.props;
   @media screen and (max-width: 900px) {
     :root {
       font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    :root {
+      font-size: 16px;
     }
   }
 </style>

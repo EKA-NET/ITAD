@@ -12,22 +12,24 @@ const aboutSections: Array<AboutInfo> = [
     title: "Czym jest IT Academic Day?",
     content:
       "Jest to wydarzenie corocznie organizowane przez koło naukowe EKA.NET na Politechnice Wrocławskiej. Jeśli jesteś zainteresowany tematyką IT, chcesz poszerzyć swoją wiedzę i poznać nowych ludzi, to jest to wydarzenie dla Ciebie! W ramach wydarzenia odbędą się prelekcje, warsztaty oraz konkursy z nagrodami. Jest to też okazja do rozmów z przedstawicielami firm IT, którzy z chęcią opowiedzą o działalności swoich firm oraz zaproponują oferty pracy i staży.",
-      imageSrc: itad,
+    imageSrc: itad,
   },
   {
     title: "O organizatorach",
     content:
       "Koło naukowe EKA.NET jest organizacją studencką działającą na Politechnice Wrocławskiej od 2017 roku. Celem koła jest rozwijanie zainteresowań studentów związanych z branżą IT, głównie wokół technologii .NET i Azure a także organizacja wydarzeń z nią związanych. W ramach koła organizowane są wydarzenia, hackathony oraz wspólne wyjścia na konferencje. Koło jest również odpowiedzialne za coroczną organizację IT Academic Day - największego wydarzenia o tematyce IT na Politechnice Wrocławskiej.",
-      imageSrc: kolo,
+    imageSrc: kolo,
   },
   {
     title: "6 znanych firm ze świata IT",
-    content: "W tym roku zapraszamy 6 prelegentów, którzy podzielą się swoją wiedzą i doświadczeniem z zakresu programowania. Każdy z prelegentów to specjalista w swojej dziedzinie, który z chęcią podzieli się swoją wiedzą z uczestnikami wydarzenia. Tematyki prelekcji będą różnorodne - powiązane z programowaniem, technologiami, a także z zarządzaniem projektami IT.",
+    content:
+      "W tym roku zapraszamy 6 prelegentów, którzy podzielą się swoją wiedzą i doświadczeniem z zakresu programowania. Każdy z prelegentów to specjalista w swojej dziedzinie, który z chęcią podzieli się swoją wiedzą z uczestnikami wydarzenia. Tematyki prelekcji będą różnorodne - powiązane z programowaniem, technologiami, a także z zarządzaniem projektami IT.",
     imageSrc: prelegenci,
   },
   {
     title: "Ponad 200 uczestników",
-    content: "Tyle właśnie osób uczestniczyło w poprzedniej edycji ITAD! W tym roku chcielibyśmy zobaczyć jeszcze więcej osób, które chcą poszerzyć swoją wiedzę z zakresu IT. Jeśli jesteś zainteresowany tematyką IT, chcesz poszerzyć swoją wiedzę i poznać nowych ludzi, to jest to wydarzenie dla Ciebie!",
+    content:
+      "Tyle właśnie osób uczestniczyło w poprzedniej edycji ITAD! W tym roku chcielibyśmy zobaczyć jeszcze więcej osób, które chcą poszerzyć swoją wiedzę z zakresu IT. Jeśli jesteś zainteresowany tematyką IT, chcesz poszerzyć swoją wiedzę i poznać nowych ludzi, to jest to wydarzenie dla Ciebie!",
     imageSrc: uczestnicy,
   },
 ];
@@ -51,15 +53,11 @@ const aboutSections: Array<AboutInfo> = [
   .about {
     padding-block: 5rem;
 
-    & > * {
-      padding-block: 6rem;
-    }
-
     & > div:nth-child(even) {
       background-color: var(--bg-color);
       color: var(--text-white);
     }
-    
+
     & > div:nth-child(odd) {
       background-color: var(--bg-lighter-color);
       color: var(--text-white);
@@ -70,6 +68,7 @@ const aboutSections: Array<AboutInfo> = [
   .about-text-container {
     width: 80%;
     text-align: center;
+    align-self: center;
   }
 
   .about-header {
@@ -80,7 +79,7 @@ const aboutSections: Array<AboutInfo> = [
 
   .about-desc {
     font-size: 1.3rem;
-    padding-inline: 7rem;
+    padding-inline: 4rem;
     padding-block: 2rem;
   }
 
@@ -88,12 +87,83 @@ const aboutSections: Array<AboutInfo> = [
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    height: 60vh;
+    margin-block: 3rem;
+    padding-block: 3rem;
+    height: 80vh;
 
-    & > img {
+    img {
       width: 100%;
-      height: 100%;
+      margin: 1rem;
+      height: auto;
       object-fit: contain;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .about-container {
+      height: 100vh;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .about-header {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .about {
+      padding: 0;
+      flex-direction: column;
+
+      & > div:nth-child(odd) {
+        flex-direction: column;
+      }
+
+      img {
+        width: 65%;
+        margin: 1rem;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .about-container {
+      flex-direction: column;
+      height: auto;
+      padding-block: 2rem;
+
+      img {
+        width: 90%;
+        margin-inline: auto;
+      }
+    }
+
+    .about-header {
+      font-size: 2rem;
+    }
+
+    .about-desc {
+      font-size: 1.3rem;
+      padding: 0;
+    }
+
+    .about-text-container {
+      width: 100%;
+    }
+
+    .about-desc {
+      font-size: 1rem;
+      padding-inline: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .about-container {
+      padding-block: 1rem;
     }
   }
 </style>
