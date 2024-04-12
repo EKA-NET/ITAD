@@ -1,0 +1,39 @@
+.register-container {
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.register-header {
+  font-size: 4em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+
+.register-button {
+  display: inline-block;
+  font-size: 2em;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  margin: 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+}
+
+.register-desc {
+  font-size: 1.4em;
+}
+
+@media screen and (max-width: 900px) {
+  .register-container {
+    margin-top: 5vh;
+    font-size: 0.6em;
+    padding: 1em;
+  }
+
+  .register-header {
+    font-size: 2.5em;
+    padding: 0.5em;
+  }
+}

@@ -1,0 +1,40 @@
+.intro {
+  margin-bottom: 20vh;
+}
+
+.date {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  font-family: JetBrains Mono, monospace;
+}
+
+.header-container {
+  margin-bottom: 40vh;
+  margin-left: 5%;
+}
+
+.intro-header {
+  font-size: 6em;
+  margin-top: 0.6em;
+  margin-bottom: 0;
+  font-family: JetBrains Mono, monospace;
+}
+
+@media screen and (max-width: 900px) {
+  .intro {
+    margin-bottom: 5vh;
+  }
+
+  .intro-header {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .date {
+    font-size: 1em;;
+  }
+
+  .header-container {
+    margin-bottom: 10vh;
+  }
+}
