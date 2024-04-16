@@ -9,7 +9,8 @@
 }
 
 .header-container {
-  margin-bottom: 40vh;
+  margin-bottom: 25%;
+  min-height: 30vh;
   margin-left: 5%;
 }
 
@@ -20,9 +21,18 @@
   font-family: JetBrains Mono, monospace;
 }
 
+.microsoft-blocks {
+  position: absolute;
+  right: 0;
+  bottom: -5vh;
+  width: 50%;
+  z-index: -1;
+}
+
 @media screen and (max-width: 900px) {
   .intro {
     margin-bottom: 5vh;
+    min-height: 50vh;
   }
 
   .intro-header {
@@ -36,5 +46,21 @@
 
   .header-container {
     margin-bottom: 10vh;
+  }
+
+  .microsoft-blocks {
+    width: 70%;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-container {
+    margin-bottom: 20vh;
+  }
+
+  .microsoft-blocks {
+    width: 100%;
+    
   }
 }
