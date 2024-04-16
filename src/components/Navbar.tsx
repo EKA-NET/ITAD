@@ -26,6 +26,7 @@ export const Navbar = () => {
         </a>
       </div>
       <div className="nav-right">
+        <a href="schedule" className="nav-link">Harmonogram</a>
         <a href={Regulamin} target='_blank' className="nav-link" rel="noopener noreferrer">Regulamin</a>
         <a href="https://forms.gle/gPkGk2KDxd8xeLDp9" className="nav-link">Rejestracja</a>
         <a href="sponsors" className="nav-link">Sponsorzy</a>
