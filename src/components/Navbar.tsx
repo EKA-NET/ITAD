@@ -1,5 +1,6 @@
 import '../styles/Navbar.scss';
 import MicrosoftLogo from "../assets/Microsoft_Logo.png";
+import Regulamin from "../assets/regulamin.pdf";
 
 export const Navbar = () => {
   return (
@@ -25,6 +26,7 @@ export const Navbar = () => {
         </a>
       </div>
       <div className="nav-right">
+        <a href={Regulamin} target='_blank' className="nav-link" rel="noopener noreferrer">Regulamin</a>
         <a href="https://forms.gle/gPkGk2KDxd8xeLDp9" className="nav-link">Rejestracja</a>
         <a href="sponsors" className="nav-link">Sponsorzy</a>
       </div>
