@@ -8,7 +8,7 @@ export const CodeWriter = () => {
     const setupTypewriter = (t: any) => {
       let HTML = t.innerHTML;
 
-      t.innerHTML = '';
+      t.innerHTML = "";
 
       let cursorPosition = 0,
         tag: any,
@@ -16,7 +16,6 @@ export const CodeWriter = () => {
         tagOpen = false,
         typeSpeed = 100,
         tempTypeSpeed = 0;
-      
 
       let type = () => {
         if (writingTag === true) {

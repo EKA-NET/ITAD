@@ -1,5 +1,6 @@
 import '../styles/Intro.scss'
 import { CodeWriter } from "./CodeWriter";
+import ItadLogo from '../assets/itad_logo.svg'
 import MicrosoftBlocks from '../assets/microsoft_blocks.svg'
 
 export const Intro = () => {
@@ -7,8 +8,8 @@ export const Intro = () => {
     <>
       <section className="intro">
         <div className="header-container">
-          <h1 className="intro-header">IT Academic Day 2024</h1>
-          <div className="date">11 maja 2024r. 9:00 budynek C-13 Politechnika Wrocławska</div>
+          <img src={ItadLogo} alt="ITAD Logo" className="itad-logo" />
+          <div className="date">11 maja 2024r. 8:30 budynek C-13 Politechnika Wrocławska</div>
           <CodeWriter />
         </div>  
       </section>

@@ -4,7 +4,6 @@
 
 .date {
   font-size: 2em;
-  margin-bottom: 0.5em;
   font-family: JetBrains Mono, monospace;
 }
 
@@ -14,11 +13,8 @@
   margin-left: 5%;
 }
 
-.intro-header {
-  font-size: 6em;
-  margin-top: 0.6em;
-  margin-bottom: 0;
-  font-family: JetBrains Mono, monospace;
+.itad-logo {
+  width: 50%;
 }
 
 .microsoft-blocks {
@@ -27,6 +23,12 @@
   bottom: -5vh;
   width: 50%;
   z-index: -1;
+}
+
+@media screen and (max-width: 1400px){
+  .itad-logo {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -41,7 +43,7 @@
   }
 
   .date {
-    font-size: 1em;;
+    font-size: 1em;
   }
 
   .header-container {
@@ -57,6 +59,11 @@
 @media screen and (max-width: 400px) {
   .header-container {
     margin-bottom: 20vh;
+    margin-inline: 3vh;
+  }
+
+  .itad-logo {
+    width: 100%;
   }
 
   .microsoft-blocks {
