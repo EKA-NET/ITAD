@@ -1,12 +1,6 @@
 import '../styles/Sponsors.scss'
-import HuedMeLogo from '../assets/HuedMe_Logo.svg'
-import XebiaLogo from '../assets/Xebia_Logo_White.png'
-import TSGLogo from '../assets/TSG_Logo.png'
-import SenteLogo from '../assets/Sente_Logo.png'
-import VolvoLogo from '../assets/Volvo_Logo.png'
-import PPGLogo from '../assets/PPG_Logo.svg'
 import { Company } from '../models/models'
-import { Constants } from '../constants'
+import { Constants, HuedMeLogo, PPGLogo, SenteLogo, TSGLogo, VolvoLogo, XebiaLogo } from '../constants'
 
 export const Sponsors = () => {
   const itCompanies: Array<Company> = [

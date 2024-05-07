@@ -1,7 +1,7 @@
 import '../styles/Intro.scss'
 import { CodeWriter } from "./CodeWriter";
-import ItadLogo from '../assets/itad_logo.svg'
 import MicrosoftBlocks from '../assets/microsoft_blocks.svg'
+import { ItadLogo } from '../constants';
 
 export const Intro = () => {
   return (

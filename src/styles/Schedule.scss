@@ -13,29 +13,52 @@
   justify-content: center;
 }
 
+.schedule-logo {
+  width: 60%;
+  height: auto;
+  padding-block: 20px;
+}
+
 .timeline {
   width: 80%;
+  font-size: 1.3rem;
+  font-weight: bold;
   height: auto;
-  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  & > div:nth-child(2n) * div {
+    flex-direction: row-reverse;
+  }
+}
+
+.schedule-element {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: row;
+  padding: 50px;
+  max-height: 65vh;
+  justify-content: space-between;
+}
+
+.schedule-time, .schedule-desc {
+  color: #2B9DBC;
+}
+
+.schedule-topic {
+  color: #E19A1B;
 }
 
 .timeline-content {
-  padding: 20px;
   border-radius: 5px;
   color: white;
-  padding: 1.75rem;
   transition: 0.4s ease;
   overflow-wrap: break-word;
-  margin: 1rem;
-  margin-bottom: 20px;
   border-radius: 6px;
-}
-
-.timeline-component {
-  margin: 0px 20px 20px 20px;
+  margin-left: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -61,6 +84,6 @@
     border-radius: 50%;
     background-color: white;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
